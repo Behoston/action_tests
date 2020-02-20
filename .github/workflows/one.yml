@@ -1,0 +1,17 @@
+name: Commit
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          ref: master
+      - name: Commit
+        run: |
+          echo "test" >> file.txt
+          git add file.txt
+          git config --global user.email "bot@github.actions"
+          git config --global user.name "Bot Github Actions"
+          git commit -m "Update file.txt"
+          git push
