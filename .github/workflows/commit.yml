@@ -1,5 +1,7 @@
 name: Commit
-on: [push]
+on:
+  push:
+    branches: do_additional_commit
 jobs:
   commit:
     runs-on: ubuntu-latest
