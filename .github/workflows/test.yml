@@ -1,0 +1,13 @@
+name: Test
+on:
+  # should run on every push instead of version tags
+  push:
+    branches:
+      - '*'
+    tags-ignore:
+      - '\d+\.\d+\.\d+'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
