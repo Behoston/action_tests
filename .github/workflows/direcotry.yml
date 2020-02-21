@@ -1,0 +1,11 @@
+name: Directory
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: List dirs
+        run: |
+          ls -a
+        working-directory: /tmp
