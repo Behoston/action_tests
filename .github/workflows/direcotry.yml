@@ -8,4 +8,8 @@ jobs:
       - name: List dirs
         run: |
           ls -a
+          env
         working-directory: /tmp
+        env:
+            HMM_PROFILE_RUN_INTEGRITY_TESTS: 'TRUE'
+
